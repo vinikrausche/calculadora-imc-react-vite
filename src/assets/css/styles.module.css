@@ -19,16 +19,20 @@ body {
   color: #3a4b5c;
 }
 
+p {
+  color: #6a7d8b;
+}
+
 .calcbutton {
   background-color: #227c9d;
   color: #fff;
   border: 1px solid #227c9d;
-  border-radius: 25px;
+  border-radius: 10px;
   padding: 10px 40px;
   font-weight: bold;
   transition: all 0.5s linear;
   margin: 20px auto auto auto;
-  width: 300px;
+  width: 320px;
 }
 
 .calcbutton:hover {
@@ -37,7 +41,6 @@ body {
 }
 
 input {
-  width: 280px;
   border: none;
   border-bottom: 1px solid #227c9d;
   background-color: rgb(220, 220, 231);

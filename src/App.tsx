@@ -26,7 +26,7 @@ function App() {
 
             <div className="flex flex-col items-center">
               <input
-                className="mt-3 mb-3 p-3  focus:outline-none"
+                className="w-80 md:w-96 mt-3 mb-3 p-3  focus:outline-none"
                 type="number"
                 onChange={(e) => getWeightField(parseFloat(e.target.value))}
                 value={weight > 0 ? weight : ""}
@@ -34,14 +34,17 @@ function App() {
               />
 
               <input
-                className="mt-3 p-3 focus:outline-none"
+                className="w-80 md:w-96 mt-3 p-3 focus:outline-none"
                 type="number"
                 onChange={(e) => getHeightField(parseFloat(e.target.value))}
                 value={height > 0 ? height : ""}
                 placeholder="Digite sua altura. Ex: 1.89 (m)"
               />
 
-              <button className={styles.calcbutton} onClick={calcImcButton}>
+              <button
+                className={styles.calcbutton + " mt-9"}
+                onClick={calcImcButton}
+              >
                 Calcular
               </button>
             </div>
