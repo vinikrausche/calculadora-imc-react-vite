@@ -1,14 +1,18 @@
 import { useState } from "react";
 import styles from "./assets/css/styles.module.css";
 import poweredImage from "./assets/images/powered.png";
-import { levels } from "./helpers/imc";
+import { levels, calcImc, Level } from "./helpers/imc";
 import { GridItem } from "./components/GridItem/GridItem";
 
 function App() {
   const [weight, getWeightField] = useState<number>(0);
   const [height, getHeightField] = useState<number>(0);
+  const [imcShow, toShow] = useState<Level | null>();
 
-  const calcImcButton = () => {};
+  const calcImcButton = () => {
+    toShow(calcImc(height, weight));
+  };
+
   return (
     <div>
       <div className="mx-8 py-3 flex justify-center md:flex md:justify-start">
@@ -54,11 +58,19 @@ function App() {
         </div>
 
         <div className="flex-1 items-center flex justify-center  ml-5">
-          <div className={styles.gridItem}>
-            {levels.map((item) => (
-              <GridItem levels={item} />
-            ))}
-          </div>
+          {!imcShow && (
+            <div className={styles.gridItem}>
+              {levels.map((item) => (
+                <GridItem levels={item} />
+              ))}
+            </div>
+          )}
+
+          {imcShow && (
+            <div className={styles.resBig}>
+              <GridItem levels={imcShow} />
+            </div>
+          )}
         </div>
       </div>
     </div>

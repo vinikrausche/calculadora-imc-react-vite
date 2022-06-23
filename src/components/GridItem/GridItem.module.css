@@ -4,7 +4,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 20px 30px;
+  padding: 20px;
   border-radius: 8px;
   color: #fff;
   font-weight: bold;
@@ -14,7 +14,7 @@
   width: 70px;
   height: 70px;
   padding: 10px;
-  margin: 5px 10px;
+  margin: 5px auto;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   display: flex;
@@ -27,7 +27,17 @@
   font-size: 20px;
   font-weight: bold;
 }
+
 .gridInfo p {
   font-size: 13px;
+  color: #fff;
+}
+
+.userIMC {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.userIMC p {
   color: #fff;
 }

@@ -22,6 +22,12 @@ export const GridItem = ({ levels }: Props) => {
         <h4>{levels.title}</h4>
       </div>
 
+      {levels.yourImc && (
+        <div className={styles.userIMC}>
+          <p>Seu IMC é: {levels.yourImc?.toFixed(2)}</p>
+        </div>
+      )}
+
       <div className={styles.gridInfo}>
         <p> Faixa do IMC: {levels.imc[0] + " - " + levels.imc[1]}</p>
       </div>
