@@ -45,3 +45,9 @@ input {
   border-bottom: 1px solid #227c9d;
   background-color: rgb(220, 220, 231);
 }
+
+.gridItem {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}

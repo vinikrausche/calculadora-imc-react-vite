@@ -1,6 +1,8 @@
 import { useState } from "react";
 import styles from "./assets/css/styles.module.css";
-import poweredImage from "./assets/powered.png";
+import poweredImage from "./assets/images/powered.png";
+import { levels } from "./helpers/imc";
+import { GridItem } from "./components/GridItem/GridItem";
 
 function App() {
   const [weight, getWeightField] = useState<number>(0);
@@ -51,8 +53,12 @@ function App() {
           </div>
         </div>
 
-        <div className=" bg-red-500 flex-1 items-center  ml-5">
-          <div className=""></div>
+        <div className="flex-1 items-center flex justify-center  ml-5">
+          <div className={styles.gridItem}>
+            {levels.map((item) => (
+              <GridItem levels={item} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
